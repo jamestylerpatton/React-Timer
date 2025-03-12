@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import InputField from "./InputField"
 
 export default function App() {
   const [seconds, setSeconds] = useState(0)
@@ -127,7 +128,12 @@ export default function App() {
               className="absolute inset-0"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white text-5xl">{formatTime(seconds)}</span>
+              <InputField
+                isRunning={isRunning}
+                setInputValue={setSeconds}
+                inputValue={formatTime(seconds)}
+                pauseTimer={() => setIsRunning(false)}
+              />
             </div>
           </div>
 
