@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import InputField from "./InputField"
+import { InputField } from "./components"
 
 export default function App() {
   const [seconds, setSeconds] = useState(0)

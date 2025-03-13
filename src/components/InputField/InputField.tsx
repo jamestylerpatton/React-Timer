@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
-import { getSecondsFromHHMMSS } from "./utils"
+import { getSecondsFromHHMMSS } from "../../utils"
 
-export default function InputField({
+export function InputField({
   isRunning,
   setInputValue,
   inputValue,
