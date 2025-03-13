@@ -44,7 +44,7 @@ export function InputField({
   }
 
   return isRunning ? (
-    <span className="text-white text-4xl" onClick={pauseAndFocus}>
+    <span className="text-white text-3xl" onClick={pauseAndFocus}>
       {inputValue}
     </span>
   ) : (
@@ -58,7 +58,7 @@ export function InputField({
       onBlur={() => {
         setInputValue(getSecondsFromHHMMSS(localValue))
       }}
-      className="w-[120px] text-center text-white text-4xl"
+      className="w-[120px] text-center text-white text-3xl"
     />
   )
 }
