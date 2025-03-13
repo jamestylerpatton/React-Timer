@@ -58,7 +58,7 @@ export function InputField({
       onBlur={() => {
         setInputValue(getSecondsFromHHMMSS(localValue))
       }}
-      className="w-[140px] text-center text-white text-4xl"
+      className="w-[120px] text-center text-white text-4xl"
     />
   )
 }

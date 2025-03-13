@@ -38,8 +38,7 @@ export default function App() {
 
   // Timer effect
   useEffect(() => {
-    // let interval: NodeJS.Timeout | null = null
-    let interval: number | null = null
+    let interval: ReturnType<typeof setInterval> | null = null
 
     if (isRunning) {
       interval = setInterval(() => {
@@ -70,9 +69,15 @@ export default function App() {
 
         {/* Timer Display */}
         <div className="flex-1 flex flex-col items-center justify-center py-12 px-6 bg-[#3d4c5a]">
-          <div className="relative w-48 h-48 mb-8">
-            <ProgressCircle seconds={seconds} />
+          <div className="relative w-48 h-48 mb-8 flex items-center justify-center">
             <div className="absolute inset-0 flex items-center justify-center">
+              <ProgressCircle
+                seconds={seconds}
+                setInputValue={setSeconds}
+                pauseTimer={() => setIsRunning(false)}
+              />
+            </div>
+            <div className="relative">
               <InputField
                 isRunning={isRunning}
                 setInputValue={setSeconds}
